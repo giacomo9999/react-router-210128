@@ -71,7 +71,7 @@ h4 {
 }
 
 .container-outer {
-  width: 30%;
+  width: 40%;
   padding: 10px;
   margin: 20px auto 10px;
   /* background color 5 */
@@ -80,10 +80,19 @@ h4 {
 }
 
 .container-inner {
-  width: 85%;
+  width: 40%;
   margin: 10px auto 5px;
   /* background color 2 */
   background-color: #3c4a59;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.user-container {
+  width: 80%;
+  margin: 10px auto 5px;
+  /* background color 2 */
+  background-color: #9caab9;
   padding: 10px;
   border-radius: 5px;
 }

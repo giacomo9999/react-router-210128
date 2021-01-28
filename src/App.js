@@ -1,8 +1,11 @@
 import React from "react";
-import { Link, Route } from "react-router-dom";
+import { Link, Route, Switch } from "react-router-dom";
 
-import Home from "./Home";
-import About from "./About"
+import HomePage from "./HomePage";
+import AboutPage from "./AboutPage";
+import UsersPage from "./UsersPage";
+import SearchPage from "./SearchPage";
+import NoMatchPage from "./NoMatchPage";
 
 function App() {
   return (
@@ -11,16 +14,27 @@ function App() {
         <nav>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/">HomePage</Link>
             </li>
             <li>
               <Link to="/about">About</Link>
             </li>
+            <li>
+              <Link to="/users">Users</Link>
+            </li>
+            <li>
+              <Link to="/search">Search</Link>
+            </li>
           </ul>
         </nav>
       </header>
-      <Route exact path="/" component={Home} />
-      <Route path="/about" component={About} />
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route exact path="/about" component={AboutPage} />
+        <Route exact path="/search" component={SearchPage} />
+        <Route path="/users" component={UsersPage} />
+        <Route component={NoMatchPage} />
+      </Switch>
     </div>
   );
 }
